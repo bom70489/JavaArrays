@@ -22,9 +22,9 @@ This repository is structured around array structures and matrix logic:
 
 | Category | Key Concepts Covered | Target Java Files |
 | :--- | :--- | :--- |
-| **Matrix & Grid Manipulation** | 2D Arrays, Diagonal Checks, Coordinate Translations, Border logic, Directions | `Checkerboard_Pattern.java`, `Cross_Matrix.java`, `Horizontal_Flip.java`, `Minesweeper_number.java`, `Nested_Border.java`, `Q5_Arrays.java`, `RC_sums.java`, `Rotate_Matrix.java`, `Set_Matrix_Zeroes.java`, `Transpose_Matrix.java` |
-| **1D Arrays & Sorting** | Array Sorting, Percentiles, Index Arithmetic | `Grading_2_Sort.java` |
-| **Control Flow & Logic** | Modulo Divisibility, Loops, State Counters | `HotandCool.java`, `OddEven.java` |
+| **Matrix & Grid Manipulation** | 2D Arrays, Diagonal Checks, Coordinate Translations, Border logic, Directions | `matrices/Checkerboard_Pattern.java`, `matrices/Cross_Matrix.java`, `matrices/Horizontal_Flip.java`, `matrices/Minesweeper_number.java`, `matrices/Nested_Border.java`, `matrices/Q5_Arrays.java`, `matrices/RC_sums.java`, `matrices/Rotate_Matrix.java`, `matrices/Set_Matrix_Zeroes.java`, `matrices/Transpose_Matrix.java` |
+| **1D Arrays & Sorting** | Array Sorting, Percentiles, Index Arithmetic | `array-fundamentals/Grading_2_Sort.java` |
+| **Control Flow & Logic** | Modulo Divisibility, Loops, State Counters | `array-fundamentals/HotandCool.java`, `array-fundamentals/OddEven.java` |
 
 ---
 
@@ -32,7 +32,7 @@ This repository is structured around array structures and matrix logic:
 
 ### 1. 2D Matrix & Grid Manipulations
 
-#### 🟦 `Checkerboard_Pattern.java`
+#### 🟦 `matrices/Checkerboard_Pattern.java`
 *   **Concepts**: Alternating grid formulas, nested loops.
 *   **Description**: Generates an $N \times N$ board displaying alternating `'X'` and `'O'` characters based on the coordinates parity: `(row + col) % 2 == 0`.
 *   **Example**:
@@ -44,7 +44,7 @@ This repository is structured around array structures and matrix logic:
         X O X 
         ```
 
-#### ❌ `Cross_Matrix.java`
+#### ❌ `matrices/Cross_Matrix.java`
 *   **Concepts**: Square matrix diagonal conditions (`row == col` and `row + col == N - 1`).
 *   **Description**: Creates an $N \times N$ matrix displaying a geometric cross of `'*'` along the primary and secondary diagonals, with `'.'` elsewhere.
 *   **Example**:
@@ -58,7 +58,7 @@ This repository is structured around array structures and matrix logic:
         * . . . *
         ```
 
-#### ↔️ `Horizontal_Flip.java`
+#### ↔️ `matrices/Horizontal_Flip.java`
 *   **Concepts**: Row-wise index reversal, 2D matrix transformation.
 *   **Description**: Flips an $R \times C$ matrix horizontally by reversing the elements of each row in-place or into a destination matrix.
 *   **Example**:
@@ -74,7 +74,7 @@ This repository is structured around array structures and matrix logic:
         6 5 4 
         ```
 
-#### 💣 `Minesweeper_number.java`
+#### 💣 `matrices/Minesweeper_number.java`
 *   **Concepts**: Matrix exploration, 8-directional neighbor navigation, boundary checks.
 *   **Description**: Solves the standard Minesweeper clue grid. Given a 2D grid containing mines (`*`) and empty spaces (`-`), it replaces empty spaces with the count of adjacent mines.
 *   **Example**:
@@ -92,7 +92,7 @@ This repository is structured around array structures and matrix logic:
         1 1 1
         ```
 
-#### 🔲 `Nested_Border.java`
+#### 🔲 `matrices/Nested_Border.java`
 *   **Concepts**: Boundary constraints checking (`i == 0 || j == 0 || i == R-1 || j == C-1`).
 *   **Description**: Sets the outermost border of an $R \times C$ 2D matrix to `"1"` and the inside cells to `"0"`, outputting the total sum of the border elements.
 *   **Example**:
@@ -106,7 +106,7 @@ This repository is structured around array structures and matrix logic:
         Total sum = 8
         ```
 
-#### 💺 `Q5_Arrays.java`
+#### 💺 `matrices/Q5_Arrays.java`
 *   **Concepts**: Multi-conditional index matching, seating arrangement generation.
 *   **Description**: Maps a custom zoning layout into an $R \times C$ 2D character array:
     *   First row (`i == 0`) is filled with `'V'` (VIP).
@@ -123,7 +123,7 @@ This repository is structured around array structures and matrix logic:
         A N N L 
         ```
 
-#### ➕ `RC_sums.java`
+#### ➕ `matrices/RC_sums.java`
 *   **Concepts**: Horizontal/Vertical dimension aggregation, transposing.
 *   **Description**: Reads a matrix, builds its transpose, and computes the sum of each individual row and column.
 *   **Example**:
@@ -142,7 +142,7 @@ This repository is structured around array structures and matrix logic:
         Column 2 sum = 9
         ```
 
-#### 🔄 `Rotate_Matrix.java`
+#### 🔄 `matrices/Rotate_Matrix.java`
 *   **Concepts**: 90-degree clockwise matrix rotation formula (`dest[i][j] = src[N - 1 - j][i]`).
 *   **Description**: Rotates an $N \times N$ square matrix 90 degrees clockwise.
 *   **Example**:
@@ -160,7 +160,7 @@ This repository is structured around array structures and matrix logic:
         9 6 3 
         ```
 
-#### 🫥 `Set_Matrix_Zeroes.java`
+#### 🫥 `matrices/Set_Matrix_Zeroes.java`
 *   **Concepts**: Matrix space optimization, state caching flags.
 *   **Description**: Checks if any element in a matrix is `0`. If so, its entire row and column are set to `0`. Uses separate arrays for rows and columns to cache zeroes, avoiding cascade failures during linear scanning.
 *   **Example**:
@@ -178,7 +178,7 @@ This repository is structured around array structures and matrix logic:
         1 0 1 
         ```
 
-#### 📐 `Transpose_Matrix.java`
+#### 📐 `matrices/Transpose_Matrix.java`
 *   **Concepts**: Grid transpose transformation (`sort[j][i] = matrix[i][j]`).
 *   **Description**: Transposes an $R \times C$ rectangular matrix into a $C \times R$ matrix.
 *   **Example**:
@@ -199,7 +199,7 @@ This repository is structured around array structures and matrix logic:
 
 ### 2. 1D Array Algorithms & Sorting
 
-#### 📊 `Grading_2_Sort.java`
+#### 📊 `array-fundamentals/Grading_2_Sort.java`
 *   **Concepts**: Array sorting, percentile calculations (`(P * (N + 1)) / 100`).
 *   **Description**: Sorts a 1D array of scores and maps them into percentile-based grades (A-F) according to 10%, 30%, 50%, 70%, and 90% boundary indices.
 
@@ -207,13 +207,21 @@ This repository is structured around array structures and matrix logic:
 
 ### 3. Basic Logic & Number Manipulations
 
-#### 🔥❄️ `HotandCool.java`
+#### 🔥❄️ `array-fundamentals/HotandCool.java`
 *   **Concepts**: Range iteration, multiples check, counters.
 *   **Description**: Classifies numbers 1 to 30 into `Super-Hot` (divisible by 2 and 3), `Warm` (divisible by 2), `Cool` (divisible by 3), and `Cold` categories.
 
-#### 🔢 `OddEven.java`
+#### 🔢 `array-fundamentals/OddEven.java`
 *   **Concepts**: Arithmetic range processing, loop variable side-effects.
 *   **Description**: Loops through a user range, extracting digits of numbers divisible by 3 or 5 to count odd and even digits. Mutates the loop index directly inside the loop (`i /= 10`), serving as a demonstration of index variable side effects.
+
+---
+
+## 📁 Project Structure
+
+- `matrices/` contains 2D matrix and grid exercises.
+- `array-fundamentals/` contains 1D array, sorting, and basic logic exercises.
+- `README.md` contains the exercise guide and examples.
 
 ---
 
@@ -223,12 +231,12 @@ To compile and run any of these files, ensure you have a Java Development Kit (J
 
 ### 1. Compile a Program
 ```bash
-javac Checkerboard_Pattern.java
+javac matrices/Checkerboard_Pattern.java
 ```
 
 ### 2. Run the Program
 ```bash
-java Checkerboard_Pattern
+java -cp matrices Checkerboard_Pattern
 ```
 
 ---
@@ -237,11 +245,11 @@ java Checkerboard_Pattern
 
 Through these array and matrix exercises, several fundamental engineering principles are highlighted:
 
-1.  **State Isolation vs. Cascade Bugs (`Set_Matrix_Zeroes.java`)**
+1.  **State Isolation vs. Cascade Bugs (`matrices/Set_Matrix_Zeroes.java`)**
     *   If you zero out rows and columns immediately during your scan, you'll overwrite values that haven't been evaluated yet, causing a "cascade" bug where the entire matrix becomes zeroes.
     *   The solution caches states in two lightweight 1D arrays (`zeroRows` of size $R$, `zeroCols` of size $C$). This demonstrates how storing metadata can save you from high-overhead structures or incorrect state transformations.
 
-2.  **Efficient Neighbors Query (`Minesweeper_number.java`)**
+2.  **Efficient Neighbors Query (`matrices/Minesweeper_number.java`)**
     *   Iterating 8 coordinates manually with separate conditionals is error-prone. The standard game-dev approach of using offset arrays (looping `di` and `dj` from -1 to 1) allows clean, reusable coordinate checks.
 
 3.  **Transposition vs Rotation**
